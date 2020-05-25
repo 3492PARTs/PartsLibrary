@@ -4,7 +4,7 @@ public class DistanceUnits {
 
     DistanceUnits(){}
 
-    double inchesToFeet(double inches){
+    double inchesToYards(double inches){
         return inches * 36;
     }
 

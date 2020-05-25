@@ -3,10 +3,18 @@ package Utilities;
 public class Timer{
 
     long startTime;
-
+    double secondGoal;
 
     Timer(){
         start();
+    }
+    /**
+     * 
+     * @param seconds the length of the timer
+     */
+    Timer(double seconds){
+        start();
+        this.secondGoal = seconds;
     }
 
     private void start(){
@@ -26,6 +34,10 @@ public class Timer{
 
     public double getElapsedSeconds(){
         return 1000 * ((double) getElapsedMillis());
+    }
+
+    public boolean getTimerOver(){
+        return ((int)(secondGoal)*1000) >= getElapsedMillis();
     }
 
 
