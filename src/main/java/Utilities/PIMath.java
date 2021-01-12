@@ -8,6 +8,7 @@ public class PIMath {
     final double integralCoefficient;
     double errorIntegral;
 
+    
     public PIMath(double proportionCoefficient, double integralCoefficient){
         this.proportionCoefficient = proportionCoefficient;
         this.integralCoefficient = integralCoefficient;

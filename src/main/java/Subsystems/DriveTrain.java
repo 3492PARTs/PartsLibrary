@@ -30,13 +30,13 @@ public abstract class DriveTrain {
     }
 
 
-    public void stop(){
+    public void stop(){// stops the robot, THIS IS NOT AN E-STOP
         move(0, 0);
     }
 
       // joystick limiter
-  private double limitedJS1 = 0;
-  private double limitedJS2 = 0;
+  private double limitedJS1 = 0;// helps track the change between new and current values
+  private double limitedJS2 = 0;// helps track the change between new and current values
 
   /**
    * Drive with speed ramp
@@ -45,7 +45,7 @@ public abstract class DriveTrain {
    * @param JoyX joystick right y axis
    */
   public void moveLimited(Double joy1, Double joy2) {
-    double limit = .02;
+    double limit = .02; // the limit of change allowed
     double change = joy1 - limitedJS1;
     if (change > limit) {
       change = limit;
@@ -64,7 +64,10 @@ public abstract class DriveTrain {
   }
 
 
-
+  /**
+   * 
+   * @param mult the multiplier normally used to invert teh front of the robot
+   */
   public void setMult(double mult){this.mult = mult;}
  
   
