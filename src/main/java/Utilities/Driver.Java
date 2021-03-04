@@ -2,6 +2,8 @@ public abstract class Driver{
 
 
     public Driver(){
+        
+        //constructor things
 
     }
 
@@ -9,7 +11,7 @@ public abstract class Driver{
 
 
 
-    public static butttons(){}// bind simple if buttons here to reduce clutter in robot java
+    public static buttons(){}// bind simple if buttons here to reduce clutter in robot java
 
 
 

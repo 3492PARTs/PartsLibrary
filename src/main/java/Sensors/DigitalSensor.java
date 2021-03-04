@@ -23,11 +23,4 @@ public class DigitalSensor {
     public boolean sensorState(){
         return digitalInput.get();
     }
-
-    public boolean notSensorState(){
-        return !digitalInput.get();
-    }
-
-    
-
 }

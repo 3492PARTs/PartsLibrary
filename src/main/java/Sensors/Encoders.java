@@ -14,15 +14,25 @@ private double degreeGoal;
         this.encoder = new Encoder(port1, port2);
         this.ticksPerRotation = ticksPerRotation;
     }
-
+    /**
+     * 
+     * @return returns the total number of rotations
+     */
     public double getTotalRotations(){
         return encoder.get()/ticksPerRotation;
     }
-
+    /**
+     * 
+     * @return the count in raw sensor units of the encoder 
+     */
     public int getRawCount(){
         return encoder.get();
     }
 
+    /**
+     * 
+     * @return the amount of degrees the encoder has rotated
+     */
     public double getDegrees(){
         return  (encoder.get()%ticksPerRotation) * (ticksPerRotation/360.0);
     }
